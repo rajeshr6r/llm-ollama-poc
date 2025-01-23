@@ -1,0 +1,8 @@
+docker run \
+-p 8000:8000 \
+-e CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER="chromadb.auth.token.TokenConfigServerAuthCredentialsProvider" \
+-e CHROMA_SERVER_AUTH_PROVIDER="chromadb.auth.token.TokenAuthServerProvider" \
+-e CHROMA_SERVER_AUTH_CREDENTIALS="new-token" \ # This is your API token once container boots
+-e CHROMA_SERVER_AUTH_TOKEN_TRANSPORT_HEADER="X_CHROMA_TOKEN" \
+-v /your/path/to/persistence/:/chroma/chroma \ # `/your/path/to/persistence` should be folder on host machine you want to write storage too for Chroma persistence between containers.
+chromadb/chroma
