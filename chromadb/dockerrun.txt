@@ -1,3 +1,5 @@
+# https://www.youtube.com/watch?v=4ApW6ZwqW20
+
 docker run \
 -p 8000:8000 \
 -e CHROMA_SERVER_AUTH_CREDENTIALS_PROVIDER="chromadb.auth.token.TokenConfigServerAuthCredentialsProvider" \
